@@ -43,11 +43,11 @@ async function weatherApp(s, f) {
   // console.log(getWeatherApi);
   let days = getWeatherApi.forecast.forecastday;
 
-  showDataFirst(getWeatherApi, days);
+  showDataFirst(getWeatherApi);
   showDataCards(days);
   // nameCountry();
 }
-weatherApp("Cairo",1);
+weatherApp("Cairo");
 
 // async function nameCountry(search) {
 //   // API Country
@@ -75,7 +75,7 @@ weatherApp("Cairo",1);
 
 // ################################################
 
-function showDataFirst(getWeatherApi, days) {
+function showDataFirst(getWeatherApi) {
   let country = document.querySelector(".card-title .country");
   let degree = document.querySelector(".card-title .degree");
   let iconWeather = document.querySelector(".card img");
@@ -152,9 +152,12 @@ searchInput.addEventListener("keyup", (s) => {
 //   weatherApp(f.target.value,s);
 // })
 btnSearch.addEventListener("click", function () {
-  let filterDays = filterInput.value;
+  let filterDays = parseInt(filterInput.value);
   let search = searchInput.value;
   weatherApp(search, filterDays);
+  // if (filterDays !== 1) {
+  //   showDataCards();
+  // }
 });
 // ################################################
 // **** Dark Mode And Light Mode

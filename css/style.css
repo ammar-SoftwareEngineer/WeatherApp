@@ -191,3 +191,6 @@ h6 {
   color: #24343d;
 }
 /* end light mode */
+#row{
+  display: block;
+}
