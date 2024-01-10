@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+body {
+  background-color: #1b262c;
+  background-image: url("../images/Frame\ 18.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden !important;
+}
+/* start navbar */
+.navbar-toggler {
+  box-shadow: none;
+  border: none;
+}
+.nav-link-theme:focus {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+  border: none;
+}
+.navbar-toggler i {
+  font-size: 25px;
+}
+
+/* end navbar */
+/* start home */
+.home .head-home h1 {
+  line-height: 1.6;
+}
+.home .head-home span {
+  background: linear-gradient(91deg, #caecff 39.76%, #78cfff 86.12%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (min-width: 992px) {
+  .home .head-home h1 {
+    width: 50%;
+  }
+}
+.search-home ,.filter-days{
+  background-color: #24343d;
+}
+.search-home input {
+  background-color: #24343d;
+  color: white;
+}
+.filter-days input{
+  background-color: #24343d;
+  color: white;
+}
+.search-home input:focus
+, .filter-days input:focus {
+  background-color: #24343d;
+  color: white;
+}
+.search-home input::placeholder
+, .filter-days input::placeholder {
+  color: rgba(255, 255, 255, 0.822);
+}
+/* end home */
+/* start card weather */
+.card {
+  background-color: #24353e;
+  background-image: url("../images/Ellipse\ 2.svg");
+  background-position: bottom left;
+}
+.card-wind .icon {
+  width: 36px;
+  height: 36px;
+  background-color: #14232c;
+}
+.search-list{
+  background-color: #24343d;
+}
+/* end card weather */
+/* start contact us */
+.form-contact input,
+.form-contact textarea {
+  background-color: #24343d;
+  color: white;
+}
+.form-contact input::placeholder,
+.form-contact textarea::placeholder {
+  color: white;
+}
+.form-contact input:focus,
+.form-contact textarea:focus {
+  background-color: #24343d;
+  color: white;
+}
+@media (min-width: 992px) {
+  .form-contact .form {
+    width: 70%;
+  }
+}
+
+/* end contact us */
+/* start light mode */
+.light {
+  background-color: white;
+  color: #24343d !important;
+}
+.light p,
+.light span,
+.light i {
+  color: #24343d !important;
+}
+
+.light h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #24343d !important;
+}
+.light .nav-link-dark {
+  display: block;
+}
+.light .nav-link-light {
+  display: none;
+}
+.light nav a {
+  color: #24343d !important;
+}
+.light .navbar-toggler i {
+  color: #24343d !important;
+}
+.light .home i {
+  color: #24343d8e !important;
+}
+.light .home .head-home span {
+  background: linear-gradient(90deg, #68a9cf 39.76%, #78cfff 86.12%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.light .search-home
+,.light .filter-days  {
+  background-color: white;
+}
+.light .search-home input 
+, .light .filter-days input{
+  background-color: white;
+  color: #24343d;
+}
+.light .search-home input:focus
+,.light .filter-days input:focus {
+  background-color: white;
+  color: #24343d;
+}
+.light .search-home input::placeholder
+,.light .filter-days input::placeholder {
+  color: #24343d;
+}
+
+.light .card {
+  background-color: white;
+  background-image: url("../images/Ellipse\ 2\ light.svg");
+  background-position: bottom left;
+}
+.light .card-wind .icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(82, 78, 78, 0.2);
+}
+.light .form-contact input,
+.light .form-contact textarea {
+  background-color: white;
+  color: #24343d;
+}
+.light.form-contact input::placeholder,
+.light .form-contact textarea::placeholder {
+  color: #24343d;
+}
+.light .form-contact input:focus,
+.light .form-contact textarea:focus {
+  background-color: white;
+  color: #24343d;
+}
+/* end light mode */

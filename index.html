@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css files -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- title -->
+  <title>Weather Website</title>
+</head>
+
+<body>
+  <!-- start navbar -->
+  <nav class="navbar navbar-expand-lg mt-4">
+    <div class="container">
+      <a class="navbar-brand text-white fs-2 fw-bold" href="#">Weather</a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button> -->
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p-lg-0 p-3 ">
+        
+          <li class="nav-item">
+            <button class="nav-link-theme bg-transparent border-0 btn-outline-primary fs-5"><i class="fa-regular fa-lightbulb text-white"></i></button>
+          </li>
+          <!-- <li class="nav-item">
+            <button class="nav-link-dark bg-transparent border-0 fs-5"><i
+                class="fa-solid fa-moon text-dark"></i></button>
+          </li> -->
+        </ul>
+      <!-- </div> -->
+    </div>
+  </nav>
+  <!-- end navbar -->
+  <!-- start home -->
+  <section class="home pt-5">
+    <div class="container pt-5">
+      <div class="head-home">
+        <h1 class="text-white mx-auto text-center">Seeing the weather of the whole world with <span
+            class="fw-bold">Weather App!</span> </h1>
+      </div>
+      <div class="row gy-5 align-items-center mt-5">
+        <div class="col-lg-6 col-md-6">
+          <div class="search-home shadow-lg  d-flex justify-content-center align-items-center rounded-3 position-relative">
+            <input type="text" id="search" class="form-control py-3 border-0" placeholder="Search Here">
+            <i class="fa-solid fa-magnifying-glass text-white-50 pe-3 position-absolute end-0"></i>
+            <!-- <ul class="search-list text-white position-absolute top-100 start-0 shadow-lg  w-100  p-3 rounded-bottom-3 mt-1 z-3">
+
+            </ul> -->
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="filter-days  shadow-lg d-flex justify-content-center align-items-center rounded-3 position-relative">
+            <input type="text" id="filter" class="form-control py-3 border-0" placeholder="Number of days">
+            <i class="fa-solid fa-arrow-up-1-9 text-white-50 pe-3 position-absolute end-0"></i>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2">
+          <div class="btn-search d-flex justify-content-md-start justify-content-center align-items-center">
+           <button id="btnSearch" class="btn btn-primary py-2 px-4 ">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end home -->
+  <!-- start cards Weather -->
+  <section class="weather py-5">
+    <div class="container pt-5">
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8 ">
+          <div class="card rounded-4 text-white shadow-lg">
+            <div class="img-card w-25  mx-auto pt-3">
+              <img src="" class="w-100" alt="...">
+            </div>
+
+            <div class="card-body px-5">
+              <div class="card-head d-flex ga justify-content-between  align-items-center pb-4 flex-wrap">
+                <h5 class="card-title text-white  fs-1 fw-light pb-md-0 pb-3"> <span
+                    class="fw-bold country text-white"></span> <span class="degree text-white"></span> </h5>
+                <div class="card-date d-flex column-gap-5 row-gap-3  flex-wrap fs-4">
+                  <span class="card-month text-white"></span>
+                  <span class="card-day text-white"></span>
+                </div>
+              </div>
+
+              <div class="card-wind d-flex justify-content-between pb-3 flex-wrap">
+                <div class="speed  d-flex gap-2">
+                  <div class="icon d-flex justify-content-center align-items-center rounded-circle">
+                    <i class="fa-solid fa-wind text-white"></i>
+                  </div>
+
+                  <p class="wind-speed pt-1 fs-5">Wind speed : <span class="text-white"></span> KM</p>
+                </div>
+                <div class="direction  d-flex gap-2">
+                  <div class="icon d-flex justify-content-center align-items-center rounded-circle">
+                    <i class="fa-regular fa-compass text-white"></i>
+                  </div>
+                  <p class="wind-direction pt-1 fs-5">Wind direction : <span class="text-white"></span> </p>
+                </div>
+                <div class="humidity d-flex gap-2">
+                  <div class="icon d-flex justify-content-center align-items-center rounded-circle">
+                    <i class="fa-solid fa-umbrella text-white"></i>
+                  </div>
+                  <p class="humidity pt-1 fs-5">Humidity : <span class="text-white"></span> %</p>
+                </div>
+
+              </div>
+              <p class="card-status fs-4"></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row gy-5 mt-5" id="row">
+
+
+      </div>
+
+    </div>
+  </section>
+  <!-- end cards Weather -->
+  <!-- ######################################## -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+
+</script>
+</body>
+
+</html>
