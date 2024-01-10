@@ -37,7 +37,7 @@ let monthData = months[month];
 // ******* start API
 async function weatherApp(s, f) {
   let weatherApi = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=ac72d922828f430f85e201458240301&q=${s}&days=${f}`
+    `https://api.weatherapi.com/v1/forecast.json?key=ac72d922828f430f85e201458240301&q=${s}&days=${f}`
   );
   let getWeatherApi = await weatherApi.json();
   // console.log(getWeatherApi);
