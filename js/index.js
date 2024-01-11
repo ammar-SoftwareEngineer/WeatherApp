@@ -1,6 +1,7 @@
 let searchInput = document.getElementById("search");
 let filterInput = document.getElementById("filter");
 let btnSearch = document.getElementById("btnSearch");
+let btnLocation = document.getElementById("btnLocation");
 // start date
 let time = new Date();
 let day = time.getDay();
@@ -35,19 +36,33 @@ let monthData = months[month];
 
 // ################################################
 // ******* start API
+btnLocation.addEventListener("click", function () {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  }
+});
+
+function showPosition(position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+  let changeLat = latitude;
+  let changeLon = longitude;
+  let contentLocation = `${changeLat},${changeLon}`;
+  weatherApp(contentLocation);
+}
 async function weatherApp(s, f) {
   let weatherApi = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=ac72d922828f430f85e201458240301&q=${s}&days=${f}`
   );
   let getWeatherApi = await weatherApi.json();
-  // console.log(getWeatherApi);
+  console.log(getWeatherApi);
   let days = getWeatherApi.forecast.forecastday;
 
   showDataFirst(getWeatherApi);
   showDataCards(days);
   // nameCountry();
 }
-weatherApp("Cairo");
+weatherApp("egypt");
 
 // async function nameCountry(search) {
 //   // API Country
@@ -85,7 +100,8 @@ function showDataFirst(getWeatherApi) {
   let statusWeather = document.querySelector(".card-status");
   let monthWeather = document.querySelector(".card-month");
   let dayWeather = document.querySelector(".card-day");
-  country.innerHTML = getWeatherApi.location.name;
+  country.innerHTML =
+    getWeatherApi.location.country + " " + getWeatherApi.location.name;
   degree.innerHTML = getWeatherApi.current.temp_c + "°C";
   iconWeather.src = getWeatherApi.current.condition.icon;
   windSpeed.innerHTML = getWeatherApi.current.wind_kph;
@@ -144,11 +160,10 @@ function showDataCards(days) {
 
 searchInput.addEventListener("keyup", (s) => {
   weatherApp(s.target.value);
-  // nameCountry(s.target.value)
 });
 
 btnSearch.addEventListener("click", function () {
-  let filterDays =filterInput.value;
+  let filterDays = filterInput.value;
   let search = searchInput.value;
   weatherApp(search, filterDays);
   if (filterDays >= 2) {
@@ -157,12 +172,17 @@ btnSearch.addEventListener("click", function () {
     document.getElementById("row").style.display = "none";
   }
 
-  if (search == "" && filterDays=="") {
+  if (search == "" && filterDays == "") {
     alert("Please Enter The Country And Number Of Days");
   } else if (isNaN(filterDays)) {
     alert("Please Enter The Number Of Input Days");
   }
+  clearForm()
 });
+function clearForm() {
+  searchInput.value = "";
+  filterInput.value = "";
+}
 // ################################################
 // **** Dark Mode And Light Mode
 let btnTheme = document.querySelector(".nav-link-theme");

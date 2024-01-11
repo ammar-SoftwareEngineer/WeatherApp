@@ -10,6 +10,9 @@ a {
 li {
   list-style: none;
 }
+html,body{
+  scroll-behavior: smooth;
+}
 body {
   background-color: #1b262c;
   background-image: url("../images/Frame\ 18.svg");
@@ -117,7 +120,9 @@ body {
 .light i {
   color: #24343d !important;
 }
-
+.light .btn-location button i{
+  color: white !important;
+}
 .light h1,
 h2,
 h3,
