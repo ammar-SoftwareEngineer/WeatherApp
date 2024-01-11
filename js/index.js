@@ -155,7 +155,6 @@ btnSearch.addEventListener("click", function () {
   weatherApp(search, filterDays);
   if (filterDays>=2) {
     document.getElementById("row").style.display="block";
-    showDataCards();
   }else{
     document.getElementById("row").style.display="none";
   }
