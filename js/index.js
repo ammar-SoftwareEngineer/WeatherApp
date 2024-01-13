@@ -1,6 +1,6 @@
 let searchInput = document.getElementById("search");
-let filterInput = document.getElementById("filter");
-let btnSearch = document.getElementById("btnSearch");
+let filterSelect = document.querySelectorAll(".form-select");
+// let btnSearch = document.getElementById("btnSearch");
 let btnLocation = document.getElementById("btnLocation");
 // start date
 let time = new Date();
@@ -63,30 +63,6 @@ async function weatherApp(s, f) {
   // nameCountry();
 }
 weatherApp("egypt");
-
-// async function nameCountry(search) {
-//   // API Country
-//   let countriesApi = await fetch("https://restcountries.com/v3.1/all");
-//   let getCountriesApi = await countriesApi.json();
-//   let list = ``;
-//   for (let c = 0; c < getCountriesApi.length; c++) {
-//     let nameCountries = getCountriesApi[c].name.common;
-//     if (nameCountries.includes(search) == true) {
-//       list += `<li class="pt-3">${getCountriesApi[c].name.common.slice(0)}</li>`;
-//       {
-//         document.querySelector(".search-list").innerHTML = list;
-//       }
-//     }
-//     // let list = `<li class="">${getCountriesApi[0].name.common.slice(0)}</li>`;
-//     // if (search === getCountriesApi[0].name.common) {
-//     //   document.querySelector(".search-list").innerHTML = list;
-//     // } else {
-//     //   console.log("false");
-//     // }
-//   }
-//   weatherApp("cairo");
-// }
-// // **************** end API
 
 // ################################################
 
@@ -162,27 +138,20 @@ searchInput.addEventListener("keyup", (s) => {
   weatherApp(s.target.value);
 });
 
-btnSearch.addEventListener("click", function () {
-  let filterDays = filterInput.value;
-  let search = searchInput.value;
-  weatherApp(search, filterDays);
-  if (filterDays >= 2) {
-    document.getElementById("row").style.display = "block";
-  } else {
-    document.getElementById("row").style.display = "none";
-  }
-
-  if (search == "" && filterDays == "") {
-    alert("Please Enter The Country And Number Of Days");
-  } else if (isNaN(filterDays)) {
-    alert("Please Enter The Number Of Input Days");
-  }
-  clearForm()
+filterSelect.forEach((select) => {
+  select.addEventListener("change", (f) => {
+    let selectedValue = f.target.value;
+    if (selectedValue >= 2) {
+      document.getElementById("row").style.display = "flex";
+    } else {
+      document.getElementById("row").style.display = "none";
+    }
+    let search = searchInput.value;
+    weatherApp(search, selectedValue);
+  });
 });
-function clearForm() {
-  searchInput.value = "";
-  filterInput.value = "";
-}
+
+
 // ################################################
 // **** Dark Mode And Light Mode
 let btnTheme = document.querySelector(".nav-link-theme");

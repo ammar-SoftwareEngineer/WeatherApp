@@ -60,20 +60,23 @@
         </div>
         <div class="col-lg-4 col-md-4">
           <div class="filter-days  shadow-lg d-flex justify-content-center align-items-center rounded-3 position-relative">
-            <input type="text"  id="filter" class="form-control py-3 border-0" placeholder="Number of days">
-            <i class="fa-solid fa-arrow-up-1-9 text-white-50 pe-3 position-absolute end-0"></i>
+            <select class="form-select border-0 py-3" aria-label="Default select example">
+              <option selected>Select Number</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+            <i class="fa-solid fa-arrow-up-1-9 text-white-50 pe-3 position-absolute end-0 z-3"></i>
           </div>
         </div>
         <div class="col-lg-2 col-md-2 ">
-          <div class="btns d-flex justify-content-md-start justify-content-center gap-3">
-            <div class="btn-search ">
-              <button id="btnSearch" class="btn btn-primary py-2 px-4 ">Search</button>
-             </div>
-             <div class="btn-location ">
-               <button id="btnLocation" class="btn btn-primary py-2 px-4 "><i class="fa-solid fa-location-dot text-white"></i></button>
-              </div>
-          </div>
-       
+          <div class="btn-location text-md-start text-center">
+            <button id="btnLocation" class="btn btn-primary py-2 px-4 "><i class="fa-solid fa-location-dot text-white"></i></button>
+           </div>
         </div>
       </div>
     </div>

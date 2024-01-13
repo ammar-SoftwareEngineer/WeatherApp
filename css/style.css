@@ -10,7 +10,8 @@ a {
 li {
   list-style: none;
 }
-html,body{
+html,
+body {
   scroll-behavior: smooth;
 }
 body {
@@ -52,24 +53,25 @@ body {
     width: 50%;
   }
 }
-.search-home ,.filter-days{
+.search-home,
+.filter-days {
   background-color: #24343d;
 }
 .search-home input {
   background-color: #24343d;
   color: white;
 }
-.filter-days input{
+.filter-days select {
   background-color: #24343d;
   color: white;
 }
-.search-home input:focus
-, .filter-days input:focus {
+.search-home input:focus,
+.filter-days select:focus {
   background-color: #24343d;
   color: white;
 }
-.search-home input::placeholder
-, .filter-days input::placeholder {
+.search-home input::placeholder,
+.filter-days select::placeholder {
   color: rgba(255, 255, 255, 0.822);
 }
 /* end home */
@@ -84,7 +86,7 @@ body {
   height: 36px;
   background-color: #14232c;
 }
-.search-list{
+.search-list {
   background-color: #24343d;
 }
 /* end card weather */
@@ -120,7 +122,7 @@ body {
 .light i {
   color: #24343d !important;
 }
-.light .btn-location button i{
+.light .btn-location button i {
   color: white !important;
 }
 .light h1,
@@ -152,22 +154,22 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.light .search-home
-,.light .filter-days  {
+.light .search-home,
+.light .filter-days {
   background-color: white;
 }
-.light .search-home input 
-, .light .filter-days input{
-  background-color: white;
-  color: #24343d;
-}
-.light .search-home input:focus
-,.light .filter-days input:focus {
+.light .search-home input,
+.light .filter-days select {
   background-color: white;
   color: #24343d;
 }
-.light .search-home input::placeholder
-,.light .filter-days input::placeholder {
+.light .search-home input:focus,
+.light .filter-days select:focus {
+  background-color: white;
+  color: #24343d;
+}
+.light .search-home input::placeholder,
+.light .filter-days select::placeholder {
   color: #24343d;
 }
 
@@ -196,6 +198,6 @@ h6 {
   color: #24343d;
 }
 /* end light mode */
-#row{
+#row {
   display: none;
 }
