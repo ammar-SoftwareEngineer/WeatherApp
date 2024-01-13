@@ -36,7 +36,9 @@ body {
 .navbar-toggler i {
   font-size: 25px;
 }
-
+.btn-location i{
+font-size: 20px;
+}
 /* end navbar */
 /* start home */
 .home .head-home h1 {
@@ -89,29 +91,9 @@ body {
 .search-list {
   background-color: #24343d;
 }
-/* end card weather */
-/* start contact us */
-.form-contact input,
-.form-contact textarea {
-  background-color: #24343d;
-  color: white;
-}
-.form-contact input::placeholder,
-.form-contact textarea::placeholder {
-  color: white;
-}
-.form-contact input:focus,
-.form-contact textarea:focus {
-  background-color: #24343d;
-  color: white;
-}
-@media (min-width: 992px) {
-  .form-contact .form {
-    width: 70%;
-  }
-}
 
-/* end contact us */
+/* end card weather */
+
 /* start light mode */
 .light {
   background-color: white;

@@ -1,6 +1,5 @@
 let searchInput = document.getElementById("search");
 let filterSelect = document.querySelectorAll(".form-select");
-// let btnSearch = document.getElementById("btnSearch");
 let btnLocation = document.getElementById("btnLocation");
 // start date
 let time = new Date();
